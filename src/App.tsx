@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import DiscografiaPage from "./pages/Discografia/DiscografiaPage";
+import CancionesPage from "./pages/Discografia/CancionesPage";
+import AlbumsPage from "./pages/Discografia/AlbumsPage";
+import CancionDetailPage from "./pages/Discografia/CancionDetailPage";
+import AlbumDetailPage from "./pages/Discografia/AlbumDetailPage";
+import FavoritesPage from "./pages/Favoritos/FavoritosPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
+      <main style={{ paddingTop: '70px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/discografia" element={<DiscografiaPage />} />
+          <Route path="/favoritos" element={<FavoritesPage />} />
+          <Route path="/discografia/albums" element={<AlbumsPage />} />
+          <Route path="/discografia/albums/:id" element={<AlbumDetailPage />} />
+          <Route path="/discografia/canciones" element={<CancionesPage />} />
+          <Route path="/discografia/canciones/:id" element={<CancionDetailPage />} />
+        </Routes>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
