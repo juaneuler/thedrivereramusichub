@@ -1,0 +1,26 @@
+$color-negro: #000000;
+$color-blanco: #ffffff;
+$color-TDE: #222831;
+$color-fondo-claro: #f3f8ff;
+$color-azul: #007bff;
+$color-azul-oscuro: #0056b3;
+$color-gris-oscuro: #121212;
+$color-rosa: #e4405f;
+$color-rojo: #ff0000;
+$color-rojo-oscuro: #cc0000;
+$color-verde: #1db954;
+$color-verde-oscuro: #168f3e;
+$color-gris-claro: #f8f8f8;
+$color-gris: #cccccc;
+$color-text-muted: #757575;
+$color-favoritos: #ff4b5c;
+$color-dorado: #b8860b;
+$color-amarillo: #ffd700;
+
+
+// derivados con alpha
+$color-tarjeta-reco: rgba($color-blanco, 0.03);
+$color-shadow-reco: rgba($color-TDE, 0.08);
+$color-box-shadow: rgba($color-negro, 0.15);
+$color-sombra-oscura: rgba(0, 0, 0, 0.2);
+$color-favoritos-alpha: rgba($color-favoritos, 0.1);
