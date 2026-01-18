@@ -1,0 +1,24 @@
+@use "../../styles/base/variables" as v;
+
+.bio {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    color: v.$color-negro;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    background: none;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: v.$color-TDE;
+    font-weight: 400;
+  }
+}
