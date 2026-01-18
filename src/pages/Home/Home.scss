@@ -1,0 +1,8 @@
+@use "../../styles/base/variables" as v;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: v.$color-fondo-claro;
+  min-height: calc(100vh - 70px);
+}
