@@ -1,0 +1,60 @@
+@use "../../styles/base/variables" as v;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background: rgba(v.$color-negro, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(v.$color-blanco, 0.1);
+
+  .navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    text-decoration: none;
+    color: v.$color-blanco;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: rgba(v.$color-blanco, 0.7);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: v.$color-blanco;
+      }
+
+      &.isActive {
+        color: v.$color-blanco;
+        font-weight: bold;
+        border-bottom: 2px solid v.$color-blanco;
+        padding-bottom: 4px;
+      }
+    }
+  }
+}
