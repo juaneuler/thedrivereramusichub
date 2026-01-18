@@ -1,0 +1,269 @@
+@use "../../styles/base/variables" as v;
+
+.album-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: v.$color-fondo-claro;
+  min-height: calc(100vh - 70px);
+  padding: 2rem 1rem;
+
+  .detail-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .album-title {
+      font-size: 3rem;
+      color: v.$color-negro;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin: 0;
+      
+      @media (max-width: 600px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    .metadata {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: v.$color-text-muted;
+      margin-top: 0.5rem;
+
+      .metadata-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 450px) {
+        flex-direction: column;
+        gap: 0.3rem;
+        .main-separator { display: none; }
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  .image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px v.$color-box-shadow;
+    }
+  }
+
+  .info-side {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .tracklist-container {
+    background: v.$color-blanco;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px v.$color-shadow-reco;
+
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: v.$color-negro;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      border-bottom: 2px solid v.$color-fondo-claro;
+      padding-bottom: 0.5rem;
+    }
+
+    .tracklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        border-bottom: 1px solid v.$color-fondo-claro;
+        &:last-child { border-bottom: none; }
+        
+        a {
+          display: flex;
+          align-items: center;
+          padding: 0.7rem 0.5rem;
+          text-decoration: none;
+          color: v.$color-TDE;
+          transition: all 0.2s ease;
+          border-radius: 8px;
+
+          .track-number {
+            width: 35px;
+            font-weight: 700;
+            color: v.$color-text-muted;
+            font-size: 0.9rem;
+          }
+
+          .track-name {
+            font-weight: 500;
+          }
+
+          &:hover {
+            background-color: v.$color-fondo-claro;
+            color: v.$color-azul;
+            transform: translateX(8px);
+          }
+        }
+      }
+
+      &.deluxe li a:hover {
+        color: v.$color-dorado;
+      }
+    }
+
+    .deluxe-section {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 2px dashed v.$color-gris;
+
+      h4 {
+        color: v.$color-dorado;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .review-box {
+    background: v.$color-blanco;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px v.$color-shadow-reco;
+
+    .excerpt {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: v.$color-TDE;
+      margin-bottom: 2rem;
+    }
+
+    .buttons-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      a {
+        flex: 1;
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.8rem;
+        border-radius: 25px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        transition: 0.3s ease;
+
+        img { width: 1.1rem; }
+
+        &.spotify-btn {
+          background: v.$color-verde;
+          color: v.$color-blanco;
+          &:hover { background: v.$color-verde-oscuro; transform: translateY(-2px); }
+        }
+
+        &.youtube-btn {
+          background: v.$color-rojo;
+          color: v.$color-blanco;
+          &:hover { background: v.$color-rojo-oscuro; transform: translateY(-2px); }
+        }
+
+        &.why-btn {
+          background: v.$color-azul;
+          color: v.$color-blanco;
+          &:hover { background: v.$color-azul-oscuro; transform: translateY(-2px); }
+        }
+      }
+    }
+  }
+
+  .videos-section {
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      color: v.$color-negro;
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+
+      .video-link {
+        background: v.$color-blanco;
+        padding: 1rem;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 2px 8px v.$color-shadow-reco;
+        transition: 0.3s ease;
+        border: 1px solid transparent;
+
+        .video-content-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px v.$color-box-shadow;
+          border-color: v.$color-rojo;
+        }
+
+        .yt-mini-icon { width: 1.5rem; }
+
+        .video-info {
+          display: flex;
+          flex-direction: column;
+          .video-type {
+            font-weight: 700;
+            color: v.$color-negro;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+          }
+          .play-label {
+            color: v.$color-rojo;
+            font-size: 0.7rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
