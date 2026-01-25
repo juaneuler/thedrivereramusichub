@@ -1,0 +1,76 @@
+@use "../../styles/base/variables" as v;
+
+.main-footer {
+  background-color: v.$color-negro;
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 24px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      background-color: v.$color-gris-oscuro;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+
+      &:hover {
+        background-color: v.$color-blanco;
+        transform: translateY(-3px);
+      }
+
+      &.instagram { 
+        color: v.$color-rosa;
+      }
+      
+      &.twitter { 
+        color: v.$color-blanco; 
+        &:hover { 
+          color: v.$color-gris-oscuro; 
+        }
+      }
+      
+      &.youtube { 
+        color: v.$color-rojo;
+      }
+      
+      &.spotify { 
+        color: v.$color-verde;
+      }
+    }
+  }
+
+  .footer-credits {
+    margin: 0;
+    color: v.$color-blanco;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 523px) {
+  .main-footer {
+    .social-links {
+      gap: 10px;
+      a {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+    }
+  }
+}
