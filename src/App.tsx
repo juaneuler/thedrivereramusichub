@@ -7,6 +7,7 @@ import AlbumsPage from "./pages/Discografia/AlbumsPage";
 import CancionDetailPage from "./pages/Discografia/CancionDetailPage";
 import AlbumDetailPage from "./pages/Discografia/AlbumDetailPage";
 import FavoritesPage from "./pages/Favoritos/FavoritosPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/discografia/canciones" element={<CancionesPage />} />
           <Route path="/discografia/canciones/:id" element={<CancionDetailPage />} />
         </Routes>
+      <Footer />
       </main>
     </>
   );
