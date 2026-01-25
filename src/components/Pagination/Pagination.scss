@@ -1,0 +1,65 @@
+@use "sass:color";
+@use "../../styles/base/variables" as v;
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 3rem 0;
+
+  .page-numbers {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .page-item,
+  .nav-button {
+    padding: 0.6rem 1rem;
+    border: 1px solid color.change(v.$color-blanco, $alpha: 0.1);
+    background: v.$color-gris-oscuro;
+    color: v.$color-blanco;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background: color.adjust(v.$color-gris-oscuro, $lightness: 10%);
+      border-color: v.$color-gris;
+      transform: translateY(-2px);
+    }
+
+    &.active {
+      background: v.$color-blanco;
+      color: v.$color-negro;
+      border-color: v.$color-blanco;
+      font-weight: 700;
+      box-shadow: 0 4px 12px color.change(v.$color-blanco, $alpha: 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+      filter: grayscale(1);
+    }
+  }
+
+  .nav-button {
+    color: v.$color-azul;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+
+    &:hover:not(:disabled) {
+      color: v.$color-blanco;
+      background: v.$color-azul;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .page-item,
+  .nav-button {
+    padding: 0.8rem 1.2rem;
+  }
+}
