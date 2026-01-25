@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { canciones } from "../../data/canciones";
 import { useFavoriteStore } from "../../store/useFavoriteStore";
 import "./CancionDetailPage.scss";
@@ -22,8 +22,15 @@ const CancionDetailPage = () => {
 
   if (!cancion) return <p className="error-message">Canción no encontrada</p>;
 
+  const formatAlbumName = (id: string) =>
+    id
+      .replaceAll("-", " ")
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
   const isFav = favorites.some((fav) => fav.id === cancion.id);
-  
+
   return (
     <section className="cancion-detail">
       <header className="detail-header">
@@ -34,7 +41,17 @@ const CancionDetailPage = () => {
             {cancion.isSingle && cancion.albumId && (
               <span className="inner-separator">|</span>
             )}
-            {cancion.albumId && <span>Álbum: {cancion.albumId}</span>}
+            {cancion.albumId && (
+              <span className="album-link-wrapper">
+                Álbum:{" "}
+                <Link
+                  to={`/discografia/albums/${cancion.albumId}`}
+                  className="album-link"
+                >
+                  {formatAlbumName(cancion.albumId)}
+                </Link>
+              </span>
+            )}
           </div>
 
           {cancion.releaseDate && (
