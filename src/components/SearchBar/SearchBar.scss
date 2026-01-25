@@ -1,0 +1,61 @@
+@use "sass:color";
+@use "../../styles/base/variables" as v;
+
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border: 2px solid color.change(v.$color-TDE, $alpha: 0.1);
+    border-radius: 50px;
+    background-color: v.$color-blanco;
+    color: v.$color-TDE;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px color.change(v.$color-negro, $alpha: 0.05);
+
+    &::placeholder {
+      color: v.$color-text-muted;
+      opacity: 0.6;
+    }
+
+    &:focus {
+      border-color: v.$color-azul;
+      box-shadow: 0 6px 15px color.change(v.$color-azul, $alpha: 0.15);
+      background-color: v.$color-blanco;
+    }
+  }
+
+  .clear-btn {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: v.$color-text-muted;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+
+    &:hover {
+      color: v.$color-rojo;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .search-bar input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
