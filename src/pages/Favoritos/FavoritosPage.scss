@@ -9,26 +9,82 @@
   padding: 3rem 1rem;
   text-align: center;
 
-  h2 {
-    color: v.$color-negro;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+
+    .title-group {
+      h2 {
+        color: v.$color-negro;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      p {
+        margin: 0.5rem 0 0;
+        color: v.$color-TDE;
+        font-size: 1.1rem;
+        opacity: 0.8;
+      }
+    }
   }
 
-  p {
-    color: v.$color-TDE;
-    font-size: 1.1rem;
-    opacity: 0.8;
-    margin-bottom: 3rem;
+  .no-results {
+    margin-top: 2rem;
+    p {
+      color: v.$color-TDE;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    button {
+      background: transparent;
+      border: 1px solid v.$color-negro;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: v.$color-negro;
+        color: v.$color-blanco;
+      }
+    }
   }
 
   .empty-state {
     margin-top: 5rem;
     font-style: italic;
     color: v.$color-text-muted;
-    opacity: 0.6;
+    font-size: 1.2rem;
+
+    p {
+      color: v.$color-text-muted;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 0.5rem;
+
+    .page-header {
+      margin-bottom: 1.5rem;
+      gap: 1.2rem;
+
+      .title-group {
+        h2 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1rem;
+          margin-top: 0.2rem;
+        }
+      }
+    }
   }
 }
 
@@ -39,6 +95,7 @@
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
+  margin-bottom: 3rem;
 }
 
 .favorite-card {
@@ -46,9 +103,7 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 20px v.$color-box-shadow;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-8px);
