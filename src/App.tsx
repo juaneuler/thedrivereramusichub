@@ -8,12 +8,23 @@ import CancionDetailPage from "./pages/Discografia/CancionDetailPage";
 import AlbumDetailPage from "./pages/Discografia/AlbumDetailPage";
 import FavoritesPage from "./pages/Favoritos/FavoritosPage";
 import Footer from "./components/Footer/Footer";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <>
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          className: "tde-toast",
+          classNames: {
+            success: "tde-toast-success",
+            error: "tde-toast-error",
+          },
+        }}
+      />
       <NavBar />
-      <main style={{ paddingTop: '70px' }}>
+      <main style={{ paddingTop: "70px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discografia" element={<DiscografiaPage />} />
@@ -21,9 +32,12 @@ function App() {
           <Route path="/discografia/albums" element={<AlbumsPage />} />
           <Route path="/discografia/albums/:id" element={<AlbumDetailPage />} />
           <Route path="/discografia/canciones" element={<CancionesPage />} />
-          <Route path="/discografia/canciones/:id" element={<CancionDetailPage />} />
+          <Route
+            path="/discografia/canciones/:id"
+            element={<CancionDetailPage />}
+          />
         </Routes>
-      <Footer />
+        <Footer />
       </main>
     </>
   );
