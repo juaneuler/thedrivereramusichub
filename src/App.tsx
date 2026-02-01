@@ -11,6 +11,8 @@ import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
 
 function App() {
+  const BASE_URL = "https://thedrivereramusichub.netlify.app";
+
   return (
     <>
       <title>THE DRIVER ERA | Music Hub</title>
@@ -30,7 +32,7 @@ function App() {
         property="og:description"
         content="Tu centro de música definitivo para todo lo relacionado con The Driver Era."
       />
-      <meta property="og:image" content="/img/seo/imgSeo.jpg" />
+      <meta property="og:image" content={`${BASE_URL}/img/seo/imgSeo.jpg`} />
       <meta
         property="og:url"
         content="https://thedrivereramusichub.netlify.app/"
@@ -38,7 +40,7 @@ function App() {
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="THE DRIVER ERA | Music Hub" />
-      <meta name="twitter:image" content="/img/seo/imgSeo.jpg" />
+      <meta name="twitter:image" content={`${BASE_URL}/img/seo/imgSeo.jpg`} />
       <Toaster
         position="bottom-right"
         toastOptions={{
