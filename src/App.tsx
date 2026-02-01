@@ -9,6 +9,7 @@ import AlbumDetailPage from "./pages/Discografia/AlbumDetailPage";
 import FavoritesPage from "./pages/Favoritos/FavoritosPage";
 import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const BASE_URL = "https://thedrivereramusichub.netlify.app";
@@ -64,6 +65,7 @@ function App() {
             path="/discografia/canciones/:id"
             element={<CancionDetailPage />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </main>
