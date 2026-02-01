@@ -4,11 +4,18 @@ import "./AlbumsPage.scss";
 
 const AlbumsPage = () => {
   return (
-    <section className="albums-page">
-      <h2>ALBUMS</h2>
-      <p>Descubrí la discografía completa de la banda</p>
-      <AlbumsList albums={albums} />
-    </section>
+    <>
+      <title>Álbumes | THE DRIVER ERA</title>
+      <meta
+        name="description"
+        content="Listado completo de álbumes oficiales de The Driver Era."
+      />
+      <section className="albums-page">
+        <h2>ALBUMS</h2>
+        <p>Descubrí la discografía completa de la banda</p>
+        <AlbumsList albums={albums} />
+      </section>
+    </>
   );
 };
 

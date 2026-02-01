@@ -11,6 +11,7 @@ import "./FavoritosPage.scss";
 const FavoritesPage = () => {
   const favorites = useFavoriteStore((state) => state.favorites);
   const { width } = useScreenSize();
+  const count = favorites.length;
 
   const itemsPerPage = width < 500 ? 7 : 12;
 
@@ -36,77 +37,87 @@ const FavoritesPage = () => {
     return Array.from(new Set(albumIds));
   }, [favorites]);
 
+  const descriptionText =
+    count === 0
+      ? "Tu lista de favoritos está vacía. Empezá a agregar canciones!"
+      : `Tenés ${count} ${count === 1 ? "canción guardada" : "canciones guardadas"} en tu colección de TDE.`;
+
   return (
-    <section className="favorites-page">
-      <header className="page-header">
-        <div className="title-group">
-          <h2>MIS FAVORITOS</h2>
-          <p>
-            {favorites.length === 0
-              ? "Todavía no tenés canciones favoritas"
-              : `Gestioná tus canciones preferidas`}
-          </p>
-        </div>
+    <>
+      <title>Mis Favoritos | THE DRIVER ERA</title>
+      <meta name="description" content={descriptionText} />
 
-        {favorites.length > 0 && (
-          <>
-            <SearchBar
-              value={searchTerm}
-              onChange={(val) => {
-                setSearchTerm(val);
-                setCurrentPage(1);
-              }}
-            />
+      <section className="favorites-page">
+        <header className="page-header">
+          <div className="title-group">
+            <h2>MIS FAVORITOS</h2>
+            <p>
+              {favorites.length === 0
+                ? "Todavía no tenés canciones favoritas"
+                : `Gestioná tus canciones preferidas`}
+            </p>
+          </div>
 
-            <FiltersBar
-              albums={uniqueAlbums}
-              currentOrder={order}
-              currentAlbum={albumFilter}
-              onOrderChange={(newOrder) => {
-                setOrder(newOrder);
-                setCurrentPage(1);
-              }}
-              onAlbumChange={(newAlbum) => {
-                setAlbumFilter(newAlbum);
-                setCurrentPage(1);
-              }}
-            />
-          </>
-        )}
-      </header>
-
-      {favorites.length > 0 ? (
-        <>
-          {processedSongs.length > 0 ? (
+          {favorites.length > 0 && (
             <>
-              <FavoritesList songs={currentSongs} />
+              <SearchBar
+                value={searchTerm}
+                onChange={(val) => {
+                  setSearchTerm(val);
+                  setCurrentPage(1);
+                }}
+              />
 
-              {favorites.length > 6 && totalPages > 1 && (
-                <Pagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={(page) => {
-                    setCurrentPage(page);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                />
-              )}
+              <FiltersBar
+                albums={uniqueAlbums}
+                currentOrder={order}
+                currentAlbum={albumFilter}
+                onOrderChange={(newOrder) => {
+                  setOrder(newOrder);
+                  setCurrentPage(1);
+                }}
+                onAlbumChange={(newAlbum) => {
+                  setAlbumFilter(newAlbum);
+                  setCurrentPage(1);
+                }}
+              />
             </>
-          ) : (
-            <div className="no-results">
-              <p>
-                No se encontraron favoritos que coincidan con "{searchTerm}"
-              </p>
-              <button onClick={clearFilters}>Limpiar búsqueda</button>
-            </div>
           )}
-        </>
-      ) : (
-        <div className="empty-state">
-          <p>Explorá la discografía y marcá tus canciones favoritas!</p>
-        </div>
-      )}
-    </section>
+        </header>
+
+        {favorites.length > 0 ? (
+          <>
+            {processedSongs.length > 0 ? (
+              <>
+                <FavoritesList songs={currentSongs} />
+
+                {favorites.length > 6 && totalPages > 1 && (
+                  <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={(page) => {
+                      setCurrentPage(page);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  />
+                )}
+              </>
+            ) : (
+              <div className="no-results">
+                <p>
+                  No se encontraron favoritos que coincidan con "{searchTerm}"
+                </p>
+                <button onClick={clearFilters}>Limpiar búsqueda</button>
+              </div>
+            )}
+          </>
+        ) : (
+          <div className="empty-state">
+            <p>Explorá la discografía y marcá tus canciones favoritas!</p>
+          </div>
+        )}
+      </section>
+    </>
   );
 };
 

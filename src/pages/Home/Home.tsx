@@ -5,11 +5,14 @@ import Recomendaciones from "../../components/Recomendaciones/Recomendaciones";
 
 const Home = () => {
   return (
-    <main className="home">
-      <Portada />
-      <Bio />
-      <Recomendaciones />
-    </main>
+    <>
+      <title>THE DRIVER ERA | Music Hub</title>
+      <main className="home">
+        <Portada />
+        <Bio />
+        <Recomendaciones />
+      </main>
+    </>
   );
 };
 
