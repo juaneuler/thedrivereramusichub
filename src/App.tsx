@@ -13,6 +13,32 @@ import { Toaster } from "sonner";
 function App() {
   return (
     <>
+      <title>THE DRIVER ERA | Music Hub</title>
+      <meta
+        name="description"
+        content="Explorá la discografía completa, canciones y lanzamientos oficiales de The Driver Era. Gestioná tus favoritos y descubrí cada detalle de la banda."
+      />
+      <meta
+        name="keywords"
+        content="The Driver Era, TDE, Rocky Lynch, Ross Lynch, Discografía, Canciones, Alternativo, Pop"
+      />
+      <meta name="author" content="Juan Euler" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="THE DRIVER ERA | Music Hub" />
+      <meta
+        property="og:description"
+        content="Tu centro de música definitivo para todo lo relacionado con The Driver Era."
+      />
+      <meta property="og:image" content="/img/seo/imgSeo.jpg" />
+      <meta
+        property="og:url"
+        content="https://thedrivereramusichub.netlify.app/"
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="THE DRIVER ERA | Music Hub" />
+      <meta name="twitter:image" content="/img/seo/imgSeo.jpg" />
       <Toaster
         position="bottom-right"
         toastOptions={{
