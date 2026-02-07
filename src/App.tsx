@@ -10,6 +10,7 @@ import FavoritesPage from "./pages/Favoritos/FavoritosPage";
 import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
 import NotFound from "./pages/NotFound/NotFound";
+import { ROUTES } from "./routes/paths";
 
 function App() {
   const BASE_URL = "https://thedrivereramusichub.netlify.app";
@@ -55,17 +56,26 @@ function App() {
       <NavBar />
       <main style={{ paddingTop: "70px" }}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/discografia" element={<DiscografiaPage />} />
-          <Route path="/favoritos" element={<FavoritesPage />} />
-          <Route path="/discografia/albums" element={<AlbumsPage />} />
-          <Route path="/discografia/albums/:id" element={<AlbumDetailPage />} />
-          <Route path="/discografia/canciones" element={<CancionesPage />} />
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.DISCOGRAFIA.ROOT} element={<DiscografiaPage />} />
+          <Route path={ROUTES.FAVORITOS} element={<FavoritesPage />} />
+
+          <Route path={ROUTES.DISCOGRAFIA.ALBUMS} element={<AlbumsPage />} />
           <Route
-            path="/discografia/canciones/:id"
+            path={`${ROUTES.DISCOGRAFIA.ALBUMS}/:id`}
+            element={<AlbumDetailPage />}
+          />
+
+          <Route
+            path={ROUTES.DISCOGRAFIA.CANCIONES}
+            element={<CancionesPage />}
+          />
+          <Route
+            path={`${ROUTES.DISCOGRAFIA.CANCIONES}/:id`}
             element={<CancionDetailPage />}
           />
-          <Route path="*" element={<NotFound />} />
+
+          <Route path={ROUTES.NOT_FOUND} element={<NotFound />} />
         </Routes>
         <Footer />
       </main>
