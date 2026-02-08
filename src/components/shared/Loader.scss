@@ -1,0 +1,57 @@
+@use "../../styles/base/variables" as v;
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: v.$color-negro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loader-content {
+  text-align: center;
+
+  .loader-logo {
+    color: v.$color-blanco;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .loader-line {
+    width: 0;
+    height: 2px;
+    background: v.$color-blanco;
+    margin: 0 auto;
+    animation: grow 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+  }
+}

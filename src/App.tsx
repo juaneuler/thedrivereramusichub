@@ -1,20 +1,36 @@
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import DiscografiaPage from "./pages/Discografia/DiscografiaPage";
-import CancionesPage from "./pages/Discografia/CancionesPage";
-import AlbumsPage from "./pages/Discografia/AlbumsPage";
-import CancionDetailPage from "./pages/Discografia/CancionDetailPage";
-import AlbumDetailPage from "./pages/Discografia/AlbumDetailPage";
-import FavoritesPage from "./pages/Favoritos/FavoritosPage";
 import Footer from "./components/Footer/Footer";
 import { Toaster } from "sonner";
-import NotFound from "./pages/NotFound/NotFound";
 import { ROUTES } from "./routes/paths";
+import { useEffect, Suspense, lazy } from "react";
+import { useMusicStore } from "./services/useMusicStore";
+import Loader from "./components/shared/Loader";
+
+const Home = lazy(() => import("./pages/Home/Home"));
+const DiscografiaPage = lazy(
+  () => import("./pages/Discografia/DiscografiaPage"),
+);
+const AlbumsPage = lazy(() => import("./pages/Discografia/AlbumsPage"));
+const AlbumDetailPage = lazy(
+  () => import("./pages/Discografia/AlbumDetailPage"),
+);
+const CancionesPage = lazy(() => import("./pages/Discografia/CancionesPage"));
+const CancionDetailPage = lazy(
+  () => import("./pages/Discografia/CancionDetailPage"),
+);
+const FavoritesPage = lazy(() => import("./pages/Favoritos/FavoritosPage"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 function App() {
   const BASE_URL = "https://thedrivereramusichub.netlify.app";
+  const { fetchInitialData, isLoading } = useMusicStore();
 
+  useEffect(() => {
+    fetchInitialData();
+  }, [fetchInitialData]);
+
+  if (isLoading) return <Loader />;
   return (
     <>
       <title>THE DRIVER ERA | Music Hub</title>
@@ -55,6 +71,7 @@ function App() {
       />
       <NavBar />
       <main style={{ paddingTop: "70px" }}>
+        <Suspense fallback={<Loader />}></Suspense>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.DISCOGRAFIA.ROOT} element={<DiscografiaPage />} />
