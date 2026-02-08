@@ -4,6 +4,7 @@ export const obsessionAlbum: Album = {
   id: "obsession",
   title: "Obsession",
   releaseDate: "11-04-2025",
+  orden: 1,
 
   coverImage: "/img/albums/obsessionAlbumCover.jpg",
 
@@ -46,6 +47,7 @@ export const liveAtTheGreekAlbum: Album = {
   id: "live-at-the-greek",
   title: "Live at the Greek",
   releaseDate: "08-12-2023",
+  orden: 2,
 
   coverImage: "/img/albums/liveAtTheGreekAlbumCover.png",
 
@@ -90,6 +92,7 @@ export const summerMixtapeAlbum: Album = {
   id: "summer-mixtape",
   title: "Summer Mixtape",
   releaseDate: "16-09-2022",
+  orden: 3,
 
   coverImage: "/img/albums/summerMixtapeAlbumCover.jpg",
 
@@ -132,6 +135,7 @@ export const girlfriendAlbum: Album = {
   id: "girlfriend",
   title: "Girlfriend",
   releaseDate: "15-10-2021",
+  orden: 4,
 
   coverImage: "/img/albums/girlfriendAlbumCover.jpg",
 
@@ -180,6 +184,7 @@ export const xAlbum: Album = {
   id: "x",
   title: "X",
   releaseDate: "26-06-2019",
+  orden: 5,
 
   coverImage: "/img/albums/xAlbumCover.jpg",
 

@@ -1,5 +1,6 @@
 export interface Cancion {
   id: string;
+  orden: number;
   title: string;
   releaseDate: string;
 

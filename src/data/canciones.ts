@@ -2,6 +2,7 @@ import type { Cancion } from "../types/Cancion";
 
 export const youKeepMeUpAtNight: Cancion = {
   id: "you-keep-me-up-at-night",
+  orden: 1,
   title: "You Keep Me Up At Night",
   releaseDate: "04-09-2024",
 
@@ -41,6 +42,7 @@ export const youKeepMeUpAtNight: Cancion = {
 
 export const dontWalkAway: Cancion = {
   id: "dont-walk-away",
+  orden: 2,
   title: "Don't Walk Away",
   releaseDate: "23-10-2024",
 
@@ -71,6 +73,7 @@ export const dontWalkAway: Cancion = {
 
 export const touch: Cancion = {
   id: "touch",
+  orden: 3,
   title: "Touch",
   releaseDate: "17-12-2024",
 
@@ -102,6 +105,7 @@ export const touch: Cancion = {
 
 export const sameOldStory: Cancion = {
   id: "same-old-story",
+  orden: 4,
   title: "Same Old Story",
   releaseDate: "28-01-2025",
 
@@ -133,6 +137,7 @@ export const sameOldStory: Cancion = {
 
 export const theWeekend: Cancion = {
   id: "the-weekend",
+  orden: 5,
   title: "The Weekend",
   releaseDate: "11-04-2025",
 
@@ -172,6 +177,7 @@ export const theWeekend: Cancion = {
 
 export const nothingLeftToLose: Cancion = {
   id: "nothing-left-to-lose",
+  orden: 6,
   title: "Nothing Left to Lose",
   releaseDate: "11-04-2025",
 
@@ -196,6 +202,7 @@ export const nothingLeftToLose: Cancion = {
 
 export const dontTakeTheNight: Cancion = {
   id: "dont-take-the-night",
+  orden: 7,
   title: "Don't Take The Night",
   releaseDate: "26-02-2025",
 
@@ -231,6 +238,7 @@ export const dontTakeTheNight: Cancion = {
 
 export const idRatherDie: Cancion = {
   id: "id-rather-die",
+  orden: 8,
   title: "I'd Rather Die",
   releaseDate: "28-03-2025",
 
@@ -262,6 +270,7 @@ export const idRatherDie: Cancion = {
 
 export const cantBelieveSheGotAway: Cancion = {
   id: "cant-believe-she-got-away",
+  orden: 9,
   title: "Can't Believe She Got Away",
   releaseDate: "28-02-2025",
 
@@ -293,6 +302,7 @@ export const cantBelieveSheGotAway: Cancion = {
 
 export const everybodysLover: Cancion = {
   id: "everybodys-lover",
+  orden: 10,
   title: "Everybody's Lover",
   releaseDate: "11-04-2025",
 
@@ -324,6 +334,7 @@ export const everybodysLover: Cancion = {
 
 export const better: Cancion = {
   id: "better",
+  orden: 11,
   title: "Better",
   releaseDate: "11-04-2025",
 
@@ -348,6 +359,7 @@ export const better: Cancion = {
 
 export const overAgain: Cancion = {
   id: "over-again",
+  orden: 12,
   title: "Over Again",
   releaseDate: "23-05-2025",
 
@@ -379,6 +391,7 @@ export const overAgain: Cancion = {
 
 export const tried: Cancion = {
   id: "tried",
+  orden: 13,
   title: "Tried",
   releaseDate: "23-05-2025",
 
@@ -410,6 +423,7 @@ export const tried: Cancion = {
 
 export const getOffMyPhone: Cancion = {
   id: "get-off-my-phone",
+  orden: 14,
   title: "Get Off my Phone",
   releaseDate: "22-02-2024",
 
@@ -444,6 +458,7 @@ export const getOffMyPhone: Cancion = {
 
 export const feelYouNowLive: Cancion = {
   id: "feel-you-now-live",
+  orden: 15,
   title: "Feel You Now - Live",
   releaseDate: "08-12-2023",
 
@@ -466,6 +481,7 @@ export const feelYouNowLive: Cancion = {
 
 export const naturalLive: Cancion = {
   id: "natural-live",
+  orden: 16,
   title: "Natural - Live",
   releaseDate: "08-12-2023",
 
@@ -488,6 +504,7 @@ export const naturalLive: Cancion = {
 
 export const summertimeBabyLive: Cancion = {
   id: "summertime-baby-live",
+  orden: 17,
   title: "Summertime Baby - Live",
   releaseDate: "08-12-2023",
 
@@ -517,6 +534,7 @@ export const summertimeBabyLive: Cancion = {
 
 export const afterglowLive: Cancion = {
   id: "afterglow-live",
+  orden: 18,
   title: "Afterglow - Live",
   releaseDate: "08-12-2023",
 
@@ -546,6 +564,7 @@ export const afterglowLive: Cancion = {
 
 export const omgPlzDontComeAroundLikeAKingLive: Cancion = {
   id: "omg-plz-dont-come-around-like-a-king-live",
+  orden: 19,
   title: "OMG Plz Don't Come Around / Like a King - Live",
   releaseDate: "08-12-2023",
 
@@ -575,6 +594,7 @@ export const omgPlzDontComeAroundLikeAKingLive: Cancion = {
 
 export const whenYouNeedAManLive: Cancion = {
   id: "when-you-need-a-man-live",
+  orden: 20,
   title: "When You Need a Man - Live",
   releaseDate: "08-12-2023",
 
@@ -597,6 +617,7 @@ export const whenYouNeedAManLive: Cancion = {
 
 export const placesLive: Cancion = {
   id: "places-live",
+  orden: 21,
   title: "Places - Live",
   releaseDate: "08-12-2023",
 
@@ -626,6 +647,7 @@ export const placesLive: Cancion = {
 
 export const nobodyKnowsLive: Cancion = {
   id: "nobody-knows-live",
+  orden: 22,
   title: "Nobody Knows - Live",
   releaseDate: "08-12-2023",
 
@@ -655,6 +677,7 @@ export const nobodyKnowsLive: Cancion = {
 
 export const keepMovingForwardLive: Cancion = {
   id: "keep-moving-forward-live",
+  orden: 23,
   title: "Keep Moving Forward - Live",
   releaseDate: "08-12-2023",
 
@@ -677,6 +700,7 @@ export const keepMovingForwardLive: Cancion = {
 
 export const fantasyLive: Cancion = {
   id: "fantasy-live",
+  orden: 24,
   title: "Fantasy - Live",
   releaseDate: "08-12-2023",
 
@@ -706,6 +730,7 @@ export const fantasyLive: Cancion = {
 
 export const heavenAngelLive: Cancion = {
   id: "heaven-angel-live",
+  orden: 25,
   title: "Heaven Angel - Live",
   releaseDate: "08-12-2023",
 
@@ -728,6 +753,7 @@ export const heavenAngelLive: Cancion = {
 
 export const iGotYouYouGotMeLive: Cancion = {
   id: "i-got-you-you-got-me-live",
+  orden: 26,
   title: "I Got You, You Got Me - Live",
   releaseDate: "08-12-2023",
 
@@ -750,6 +776,7 @@ export const iGotYouYouGotMeLive: Cancion = {
 
 export const sanFranciscoLive: Cancion = {
   id: "san-francisco-live",
+  orden: 27,
   title: "San Francisco - Live",
   releaseDate: "08-12-2023",
 
@@ -772,6 +799,7 @@ export const sanFranciscoLive: Cancion = {
 
 export const takeMeAwayLive: Cancion = {
   id: "take-me-away-live",
+  orden: 28,
   title: "Take Me Away - Live",
   releaseDate: "08-12-2023",
 
@@ -801,6 +829,7 @@ export const takeMeAwayLive: Cancion = {
 
 export const malibuLive: Cancion = {
   id: "malibu-live",
+  orden: 29,
   title: "Malibu - Live",
   releaseDate: "08-12-2023",
 
@@ -830,6 +859,7 @@ export const malibuLive: Cancion = {
 
 export const preacherManLive: Cancion = {
   id: "preacher-man-live",
+  orden: 30,
   title: "Preacher Man - Live",
   releaseDate: "08-12-2023",
 
@@ -852,6 +882,7 @@ export const preacherManLive: Cancion = {
 
 export const heartOfMineLive: Cancion = {
   id: "heart-of-mine-live",
+  orden: 31,
   title: "Heart of Mine - Live",
   releaseDate: "08-12-2023",
 
@@ -874,6 +905,7 @@ export const heartOfMineLive: Cancion = {
 
 export const lowLive: Cancion = {
   id: "low-live",
+  orden: 32,
   title: "Low - Live",
   releaseDate: "08-12-2023",
 
@@ -896,6 +928,7 @@ export const lowLive: Cancion = {
 
 export const aKissLive: Cancion = {
   id: "a-kiss-live",
+  orden: 33,
   title: "A Kiss - Live",
   releaseDate: "08-12-2023",
 
@@ -925,6 +958,7 @@ export const aKissLive: Cancion = {
 
 export const rumors: Cancion = {
   id: "rumors",
+  orden: 34,
   title: "Rumors",
   releaseDate: "20-10-2023",
 
@@ -955,6 +989,7 @@ export const rumors: Cancion = {
 
 export const fantasyDeraMeelanRemix: Cancion = {
   id: "fantasy-dera-meelan-remix",
+  orden: 35,
   title: "Fantasy (Dera Meelan remix)",
   releaseDate: "21-07-2023",
 
@@ -976,6 +1011,7 @@ export const fantasyDeraMeelanRemix: Cancion = {
 
 export const malibuDeependRemix: Cancion = {
   id: "malibu-deepend-remix",
+  orden: 36,
   title: "Malibu (Deepend remix)",
   releaseDate: "21-01-2023",
 
@@ -997,6 +1033,7 @@ export const malibuDeependRemix: Cancion = {
 
 export const malibu: Cancion = {
   id: "malibu",
+  orden: 37,
   title: "Malibu",
   releaseDate: "28-07-2022",
 
@@ -1032,6 +1069,7 @@ export const malibu: Cancion = {
 
 export const turnTheMusicUp: Cancion = {
   id: "turn-the-music-up",
+  orden: 38,
   title: "Turn the music up",
   releaseDate: "16-09-2022",
 
@@ -1054,6 +1092,7 @@ export const turnTheMusicUp: Cancion = {
 
 export const iGotYouYouGotMe: Cancion = {
   id: "i-got-you-you-got-me",
+  orden: 39,
   title: "I got you, you got me",
   releaseDate: "16-09-2022",
 
@@ -1078,6 +1117,7 @@ export const iGotYouYouGotMe: Cancion = {
 
 export const likeAKing: Cancion = {
   id: "like-a-king",
+  orden: 40,
   title: "Like a King",
   releaseDate: "16-09-2022",
 
@@ -1107,6 +1147,7 @@ export const likeAKing: Cancion = {
 
 export const fantasy: Cancion = {
   id: "fantasy",
+  orden: 41,
   title: "Fantasy",
   releaseDate: "16-09-2022",
 
@@ -1144,6 +1185,7 @@ export const fantasy: Cancion = {
 
 export const theMoney: Cancion = {
   id: "the-money",
+  orden: 42,
   title: "The Money",
   releaseDate: "16-09-2022",
 
@@ -1166,6 +1208,7 @@ export const theMoney: Cancion = {
 
 export const bronco: Cancion = {
   id: "bronco",
+  orden: 43,
   title: "Bronco",
   releaseDate: "16-09-2022",
 
@@ -1195,6 +1238,7 @@ export const bronco: Cancion = {
 
 export const backToYou: Cancion = {
   id: "back-to-you",
+  orden: 44,
   title: "Back to You",
   releaseDate: "16-09-2022",
 
@@ -1224,6 +1268,7 @@ export const backToYou: Cancion = {
 
 export const beHappening: Cancion = {
   id: "be-happening",
+  orden: 45,
   title: "Be Happening",
   releaseDate: "16-09-2022",
 
@@ -1246,6 +1291,7 @@ export const beHappening: Cancion = {
 
 export const endlessly: Cancion = {
   id: "endlessly",
+  orden: 46,
   title: "Endlessly",
   releaseDate: "16-09-2022",
 
@@ -1268,6 +1314,7 @@ export const endlessly: Cancion = {
 
 export const keepMovingForward: Cancion = {
   id: "keep-moving-forward",
+  orden: 47,
   title: "Keep Moving Forward",
   releaseDate: "30-06-2022",
 
@@ -1301,6 +1348,7 @@ export const keepMovingForward: Cancion = {
 
 export const malibuFriendWithinRemix: Cancion = {
   id: "malibu-friend-within-remix",
+  orden: 48,
   title: "Malibu (Friend Within remix)",
   releaseDate: "02-09-2022",
 
@@ -1322,6 +1370,7 @@ export const malibuFriendWithinRemix: Cancion = {
 
 export const heartOfMine: Cancion = {
   id: "heart-of-mine",
+  orden: 49,
   title: "Heart of Mine",
   releaseDate: "15-10-2021",
 
@@ -1359,6 +1408,7 @@ export const heartOfMine: Cancion = {
 
 export const crayZBabeE: Cancion = {
   id: "cray-z-babe-e",
+  orden: 50,
   title: "cray z babe e",
   releaseDate: "15-10-2021",
 
@@ -1388,6 +1438,7 @@ export const crayZBabeE: Cancion = {
 
 export const leaveMeFeelingCondfident: Cancion = {
   id: "leave-me-feeling-confident",
+  orden: 51,
   title: "Leave Me Feeling Confident",
   releaseDate: "17-09-2021",
 
@@ -1423,6 +1474,7 @@ export const leaveMeFeelingCondfident: Cancion = {
 
 export const beautifulGirl: Cancion = {
   id: "beautiful-girl",
+  orden: 52,
   title: "beautiful girl",
   releaseDate: "15-10-2021",
 
@@ -1452,6 +1504,7 @@ export const beautifulGirl: Cancion = {
 
 export const n1Fan: Cancion = {
   id: "number-1-fan",
+  orden: 53,
   title: "#1 Fan",
   releaseDate: "13-08-2021",
 
@@ -1486,6 +1539,7 @@ export const n1Fan: Cancion = {
 
 export const heavenAngel: Cancion = {
   id: "heaven-angel",
+  orden: 54,
   title: "Heaven Angel",
   releaseDate: "09-07-2021",
 
@@ -1525,6 +1579,7 @@ export const heavenAngel: Cancion = {
 
 export const whenYouNeedAMan: Cancion = {
   id: "when-you-need-a-man",
+  orden: 55,
   title: "When You Need a Man",
   releaseDate: "15-10-2021",
 
@@ -1547,6 +1602,7 @@ export const whenYouNeedAMan: Cancion = {
 
 export const plzDontComeAroundInterlude: Cancion = {
   id: "plz-dont-come-around-interlude",
+  orden: 56,
   title: "Plz don't come around interlude",
   releaseDate: "15-10-2021",
 
@@ -1569,6 +1625,7 @@ export const plzDontComeAroundInterlude: Cancion = {
 
 export const omgPlzDontComeAround: Cancion = {
   id: "omg-plz-dont-come-around",
+  orden: 57,
   title: "OMG Plz Don't Come Around",
   releaseDate: "02-04-2020",
 
@@ -1600,6 +1657,7 @@ export const omgPlzDontComeAround: Cancion = {
 
 export const places: Cancion = {
   id: "places",
+  orden: 58,
   title: "Places",
   releaseDate: "07-08-2020",
 
@@ -1635,6 +1693,7 @@ export const places: Cancion = {
 
 export const aKiss: Cancion = {
   id: "a-kiss",
+  orden: 59,
   title: "A Kiss",
   releaseDate: "25-10-2019",
 
@@ -1670,6 +1729,7 @@ export const aKiss: Cancion = {
 
 export const fade: Cancion = {
   id: "fade",
+  orden: 60,
   title: "Fade",
   releaseDate: "25-09-2020",
 
@@ -1701,6 +1761,7 @@ export const fade: Cancion = {
 
 export const flashdrive: Cancion = {
   id: "flashdrive",
+  orden: 61,
   title: "flashdrive",
   releaseDate: "02-04-2020",
 
@@ -1723,6 +1784,7 @@ export const flashdrive: Cancion = {
 
 export const takeMeAway: Cancion = {
   id: "take-me-away",
+  orden: 62,
   title: "Take Me Away",
   releaseDate: "10-07-2020",
 
@@ -1758,6 +1820,7 @@ export const takeMeAway: Cancion = {
 
 export const foreverAlways: Cancion = {
   id: "forever-always",
+  orden: 63,
   title: "Forever Always",
   releaseDate: "25-10-2019",
 
@@ -1787,6 +1850,7 @@ export const foreverAlways: Cancion = {
 
 export const omgPlzDontComeAroundSmallpoolsRemix: Cancion = {
   id: "omg-plz-dont-come-around-smallpools-remix",
+  orden: 64,
   title: "OMG Plz Don't Come Around (Smallpools Remix)",
   releaseDate: "19-06-2020",
 
@@ -1810,6 +1874,7 @@ export const omgPlzDontComeAroundSmallpoolsRemix: Cancion = {
 
 export const welcomeToTheEndOfYourLife: Cancion = {
   id: "welcome-to-the-end-of-your-life",
+  orden: 65,
   title: "Welcome to the End of your Life",
   releaseDate: "26-04-2019",
 
@@ -1845,6 +1910,7 @@ export const welcomeToTheEndOfYourLife: Cancion = {
 
 export const nobodyKnows: Cancion = {
   id: "nobody-knows",
+  orden: 66,
   title: "Nobody Knows",
   releaseDate: "14-06-2019",
 
@@ -1867,6 +1933,7 @@ export const nobodyKnows: Cancion = {
 
 export const scaredOfHeights: Cancion = {
   id: "scared-of-heights",
+  orden: 67,
   title: "Scared of Heights",
   releaseDate: "28-06-2019",
 
@@ -1889,6 +1956,7 @@ export const scaredOfHeights: Cancion = {
 
 export const feelYouNow: Cancion = {
   id: "feel-you-now",
+  orden: 68,
   title: "Feel You Now",
   releaseDate: "29-03-2019",
 
@@ -1924,6 +1992,7 @@ export const feelYouNow: Cancion = {
 
 export const sanFrancisco: Cancion = {
   id: "san-francisco",
+  orden: 69,
   title: "San Francisco",
   releaseDate: "28-06-2019",
 
@@ -1953,6 +2022,7 @@ export const sanFrancisco: Cancion = {
 
 export const low: Cancion = {
   id: "low",
+  orden: 70,
   title: "Low",
   releaseDate: "26-10-2018",
 
@@ -1986,6 +2056,7 @@ export const low: Cancion = {
 
 export const giveUWhatUWant: Cancion = {
   id: "giveuwhatuwant",
+  orden: 71,
   title: "giveuwhatuwant",
   releaseDate: "28-06-2019",
 
@@ -2008,6 +2079,7 @@ export const giveUWhatUWant: Cancion = {
 
 export const natural: Cancion = {
   id: "natural",
+  orden: 72,
   title: "Natural",
   releaseDate: "28-06-2019",
 
@@ -2030,6 +2102,7 @@ export const natural: Cancion = {
 
 export const afterglow: Cancion = {
   id: "afterglow",
+  orden: 73,
   title: "Afterglow",
   releaseDate: "24-08-2018",
 
@@ -2059,6 +2132,7 @@ export const afterglow: Cancion = {
 
 export const preacherMan: Cancion = {
   id: "preacher-man",
+  orden: 74,
   title: "Preacher Man",
   releaseDate: "16-03-2018",
 

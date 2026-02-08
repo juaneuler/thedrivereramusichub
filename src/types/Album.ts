@@ -4,6 +4,7 @@ export interface Album {
   id: string;
   title: string;
   releaseDate: string;
+  orden: number,
 
   coverImage: string;
 
