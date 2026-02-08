@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { albums } from "../../data/albums";
-import { canciones } from "../../data/canciones";
+import { useMusicStore } from "../../services/useMusicStore";
 import "./AlbumDetailPage.scss";
 import spotifyIcon from "../../assets/icons/spotifyIcon.svg";
 import youtubeIcon from "../../assets/icons/youtubeIcon.png";
@@ -8,13 +7,16 @@ import youtubeIconRed from "../../assets/icons/youtubeIconRed.png";
 
 const AlbumDetailPage = () => {
   const { id } = useParams<{ id: string }>();
+
+  const albums = useMusicStore((state) => state.albums);
+  const canciones = useMusicStore((state) => state.songs);
+
   const album = albums.find((a) => a.id === id);
-
-  if (!album) return <p className="error-message">Álbum no encontrado</p>;
-
   const getTrackTitle = (trackId: string) => {
     return canciones.find((c) => c.id === trackId)?.title || trackId;
   };
+
+  if (!album) return <p className="error-message">Álbum no encontrado</p>;
 
   const listFormatter = new Intl.ListFormat("es", {
     style: "long",

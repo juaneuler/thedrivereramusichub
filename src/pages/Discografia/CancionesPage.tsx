@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useScreenSize } from "../../hooks/useScreenSize";
 import { useSongManagement } from "../../hooks/useSongManagement";
-import { canciones } from "../../data/canciones";
+import { useMusicStore } from "../../services/useMusicStore";
 import CancionesList from "../../components/Discografia/Canciones/CancionesList";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Pagination from "../../components/Pagination/Pagination";
@@ -11,6 +11,8 @@ import "./CancionesPage.scss";
 const CancionesPage = () => {
   const { width } = useScreenSize();
   const itemsPerPage = width < 500 ? 7 : 12;
+
+  const cancionesFromStore = useMusicStore((state) => state.songs);
 
   const {
     searchTerm,
@@ -26,14 +28,14 @@ const CancionesPage = () => {
     totalPages,
     debouncedSearch,
     clearFilters,
-  } = useSongManagement(canciones, itemsPerPage);
+  } = useSongManagement(cancionesFromStore, itemsPerPage);
 
   const uniqueAlbums = useMemo(() => {
-    const albumIds = canciones
+    const albumIds = cancionesFromStore
       .map((c) => c.albumId)
       .filter((id): id is string => !!id);
     return Array.from(new Set(albumIds));
-  }, []);
+  }, [cancionesFromStore]);
 
   return (
     <>

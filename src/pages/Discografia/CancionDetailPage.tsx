@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { canciones } from "../../data/canciones";
+import { useMusicStore } from "../../services/useMusicStore";
 import { useFavoriteStore } from "../../store/useFavoriteStore";
 import "./CancionDetailPage.scss";
 import spotifyIcon from "../../assets/icons/spotifyIcon.svg";
@@ -16,6 +16,8 @@ const videoTypeLabels: Record<string, string> = {
 
 const CancionDetailPage = () => {
   const { id } = useParams<{ id: string }>();
+  const albums = useMusicStore((state) => state.albums);
+  const canciones = useMusicStore((state) => state.songs);
   const favorites = useFavoriteStore((state) => state.favorites);
   const toggleFavorite = useFavoriteStore((state) => state.toggleFavorite);
   const cancion = canciones.find((c) => c.id === id);
@@ -29,8 +31,12 @@ const CancionDetailPage = () => {
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
 
-  const albumName = cancion.albumId ? formatAlbumName(cancion.albumId) : null;
-
+  const albumRelacionado = albums.find((a) => a.id === cancion.albumId);
+  const albumName = albumRelacionado
+    ? albumRelacionado.title
+    : cancion.albumId
+      ? "Álbum desconocido"
+      : null;
   const listFormatter = new Intl.ListFormat("es", {
     style: "long",
     type: "conjunction",
